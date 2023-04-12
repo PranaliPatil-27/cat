@@ -1,21 +1,19 @@
 Version: 0.02
-
- phases:
-  commonds:
-     - echo installing webserver
-     - sudo apt update
-     - sudo apt install apache2 -y
-     
- build:
-   commonds:
-      -echo building file
-      -cp index.html /Var/www/html
-      
- post_build:
-   commonds:
-      -echo configured
- artifacts:
-      file:
-       -"**/*"
+phases:
+    install:
+      commonds:
+       - echo installing webserver
+       - sudo apt update
+       - sudo apt install apache2 -y
+    build:
+      commonds:
+       - echo building file
+       - cp index.html /Var/www/html
+    post_build:
+      commonds:
+       - echo configured
+artifacts:
+    file:
+      - "**/*"
     
    
