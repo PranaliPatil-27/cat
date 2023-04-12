@@ -8,7 +8,7 @@ phases:
     build:
       commonds:
        - echo building file
-       - cp index.html /Var/www/html
+       - cp index.html /var/www/html/
     post_build:
       commonds:
        - echo configured
